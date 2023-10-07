@@ -15,7 +15,7 @@ public class Lab {
      * @return the length of arr.
      */
     public int getLengthOfArray(int[] arr){
-        return 0;
+        return arr.length;
     }
 
 
@@ -26,9 +26,15 @@ public class Lab {
      *          Indexes in arrays start counting from zero.
      * @return the element at index n of arr.
      */
-    public int getNthElementOfArray(int[] arr, int n){
-        return 0;
+   public int getNthElementOfArray(int[] arr, int n) {
+    if (n >= 0 && n < arr.length) {
+        return arr[n];
+    } else {
+        // Handle the case where the index is out of bounds (e.g., return a default value or throw an exception)
+        return -1; // You can change this to a more appropriate default value or behavior.
     }
+}
+
 
     /**
      *
@@ -39,6 +45,13 @@ public class Lab {
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
     public void setNthElementOfArray(int[] arr, int n, int val){
+        if (n >= 0 && n < arr.length) {
+            arr[n] = val;}
+            else {
+        // Handle the case where the index is out of bounds (e.g., do nothing or throw an exception)
+        System.out.println("Index is out of bounds.");
+            
+        }
 
     }
 
@@ -47,6 +60,6 @@ public class Lab {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){
-        return null;
+        return new int[n];
     }
 }
